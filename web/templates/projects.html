@@ -1,0 +1,13 @@
+{{ define "content" }}
+<div class="page-content">
+    <h1>Projects</h1>
+    <p class="subtitle">Here are some of my recent projects</p>
+
+    <div class="projects-grid"
+         hx-get="/api/projects"
+         hx-trigger="load"
+         hx-swap="innerHTML">
+        <!-- Projects will be loaded here -->
+    </div>
+</div>
+{{ end }} 

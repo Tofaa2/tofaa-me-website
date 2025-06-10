@@ -1,0 +1,22 @@
+{{ define "project-card" }}
+<div class="project-card">
+    <div class="project-image">
+        <img src="{{ .ImageURL }}" alt="{{ .Name }}">
+    </div>
+    <div class="project-content">
+        <h3>{{ .Name }}</h3>
+        <p class="project-description">{{ .Description }}</p>
+        <div class="project-tags">
+            {{ range .Tags }}
+            <span class="tag">{{ . }}</span>
+            {{ end }}
+        </div>
+        <div class="project-links">
+            {{ if .ProjectURL }}
+            <a href="{{ .ProjectURL }}" class="project-link">View Project</a>
+            {{ end }}
+            <a href="{{ .GitHubURL }}" class="project-link">GitHub</a>
+        </div>
+    </div>
+</div>
+{{ end }} 

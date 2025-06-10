@@ -1,0 +1,42 @@
+{{ define "content" }}
+<div class="page-content">
+    <div class="admin-dashboard">
+        <div class="dashboard-header">
+            <h1>Admin Dashboard</h1>
+            <a href="/admin/logout" class="btn btn-secondary">Logout</a>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="dashboard-section">
+                <h2>Quick Stats</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Projects</h3>
+                        <p class="stat-value">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Views</h3>
+                        <p class="stat-value">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-section">
+                <h2>Recent Activity</h2>
+                <div class="activity-list">
+                    <p class="no-activity">No recent activity</p>
+                </div>
+            </div>
+
+            <div class="dashboard-section">
+                <h2>Quick Actions</h2>
+                <div class="action-buttons">
+                    <button class="btn btn-primary">Add New Project</button>
+                    <button class="btn btn-secondary">Edit About Page</button>
+                    <button class="btn btn-secondary">View Analytics</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }} 
