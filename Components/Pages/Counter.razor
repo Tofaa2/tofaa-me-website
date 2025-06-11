@@ -1,0 +1,31 @@
+﻿@page "/counter"
+@rendermode InteractiveServer
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+<input @onchange="OnMessage"/>
+<p>@message</p>
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-secondary" @onclick="IncrementCountTwo">Click me for +10</button>
+@code {
+    private int currentCount;
+    string message = "";
+
+    private void OnMessage(ChangeEventArgs e)
+    {
+        message = (string)e.Value;
+    }
+
+    private void IncrementCountTwo()
+    {
+        currentCount += 10;
+    }
+    
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
