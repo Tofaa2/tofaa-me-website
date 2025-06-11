@@ -18,6 +18,7 @@ func main() {
 	http.HandleFunc("/", handlers.HandleLandingPage)
 	http.HandleFunc("/about", handlers.HandleAboutPage)
 	http.HandleFunc("/projects", handlers.HandleProjectsPage)
+	http.HandleFunc("/blogs", handlers.BlogsHandler)
 	http.HandleFunc("/contact", handlers.HandleContactPage)
 	http.HandleFunc("/api/projects", handlers.HandleProjectsAPI)
 

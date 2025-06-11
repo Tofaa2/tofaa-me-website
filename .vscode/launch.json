@@ -9,6 +9,13 @@
             "name": "Run main",
             "request": "launch",
             "type": "node-terminal"
+        },
+        {
+            "command": "go run cmd/cli/main.go",
+            "name": "Run cli",
+            "request": "launch",
+            "type": "node-terminal"
+
         }
 
     ]

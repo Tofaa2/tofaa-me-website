@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"text/template"
 
-	"me.tofaa/internal/types"
+	"me.tofaa/internal/models"
 )
 
 func HandleProjectsPage(w http.ResponseWriter, r *http.Request) {
@@ -34,7 +34,7 @@ func HandleProjectsAPI(w http.ResponseWriter, r *http.Request) {
 	))
 
 	// Get projects from the type system
-	projects := types.GetProjects()
+	projects := models.GetProjects()
 
 	// Render each project card
 	for _, project := range projects {

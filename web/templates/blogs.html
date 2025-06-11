@@ -1,0 +1,20 @@
+{{ define "content" }}
+<div class="blogs-container">
+    <h1>Blog Posts</h1>
+    <div class="blogs-grid">
+        {{ range .Blogs }}
+        <article class="blog-card">
+            <div class="blog-image">
+                <img src="{{ .ImageURL }}" alt="{{ .Title }}">
+            </div>
+            <div class="blog-content">
+                <h2>{{ .Title }}</h2>
+                <p class="blog-date">{{ .Date }}</p>
+                <p class="blog-excerpt">{{ .Excerpt }}</p>
+                <a href="/blogs/{{ .Slug }}" class="read-more">Read More</a>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</div>
+{{ end }} 
